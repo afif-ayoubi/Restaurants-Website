@@ -30,6 +30,15 @@ const product = {
 
 // Favorite Product object
 const favoriteProduct = {
+    id: 'unique_id',
     userId: 'user_id',
     productId: 'product_id',
 };
+
+// Restaurant review
+const restaurantReview = {
+    id: 'unique_id',
+    userId: 'user_id',
+    restaurantID: 'resto_id',
+    review: 'Outstanding experience'
+}
