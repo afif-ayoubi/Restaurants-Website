@@ -101,12 +101,11 @@ header > nav {
 
 .menu-categories {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
 }
 
 .menu-category {
-    flex: 0 0 calc(33.33% - 20px);
+    flex: 1;
     margin-bottom: 20px;
     padding: 10px;
     border: 1px solid #ccc;
@@ -121,6 +120,7 @@ header > nav {
 .menu-category p {
     margin: 5px 0;
 }
+
 
   footer {
     margin-top: 0;
