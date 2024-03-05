@@ -138,6 +138,7 @@ header > nav {
     min-height: 400px;
     width: 60%;
     padding: 2rem;
+    margin: 10px;
     border-radius: 15px;
     overflow: hidden;
     text-align: center;
@@ -186,6 +187,7 @@ button:hover {
 .filter-container select {
     padding: 5px;
     margin-right: 10px;
+    border-radius: 15px;
   }
   
 .filter-container button {
