@@ -1,44 +1,111 @@
-// User object
-const user = {
-    id: 'unique_id',
-    username: 'username',
-    email: 'user@example.com',
-    password: 'hello world!'
-};
-
-// Admin object
-const admin = {
-    userId: 'user_id'
+// Common function to add data to local storage
+function addToLocalStorage(key, newData) {
+    const existingData = JSON.parse(localStorage.getItem(key)) || [];
+    existingData.push(newData);
+    localStorage.setItem(key, JSON.stringify(existingData));
 }
 
-// Restaurant object
-const restaurant = {
-    id: 'unique_id',
-    name: 'Restaurant Name',
-    rating: 4.5,
-    imageURL: 'foo/bar.png',
-    summary: 'This restaurant is one of the top restaurants in town',
-    tags: ['ocean-view', 'green-view', 'clouds', 'mountain-view']
-};
-
-const product = {
-    id: 'unique_id',
-    title: 'Cheese burger',
-    rating: 3.5,
-    tags: ['burger', 'cheese']
+// Common function to get data from local storage
+function getFromLocalStorage(key) {
+    return JSON.parse(localStorage.getItem(key)) || [];
 }
 
-// Favorite Product object
-const favoriteProduct = {
-    id: 'unique_id',
-    userId: 'user_id',
-    productId: 'product_id',
-};
+// Common function to delete data from local storage
+function deleteFromLocalStorage(key, id) {
+    const existingData = JSON.parse(localStorage.getItem(key)) || [];
+    const updatedData = existingData.filter(item => item.id !== id);
+    localStorage.setItem(key, JSON.stringify(updatedData));
+}
 
-// Restaurant review
-const restaurantReview = {
-    id: 'unique_id',
-    userId: 'user_id',
-    restaurantID: 'resto_id',
-    review: 'Outstanding experience'
+// Add a new user
+function addUser(user) {
+    addToLocalStorage('users', user);
+}
+
+// Get all users
+function getUsers() {
+    return getFromLocalStorage('users');
+}
+
+// Delete a user by ID
+function deleteUser(userId) {
+    deleteFromLocalStorage('users', userId);
+}
+
+// Add a new admin
+function addAdmin(admin) {
+    addToLocalStorage('admins', admin);
+}
+
+// Get all admins
+function getAdmins() {
+    return getFromLocalStorage('admins');
+}
+
+// Delete an admin by user ID
+function deleteAdmin(userId) {
+    deleteFromLocalStorage('admins', userId);
+}
+
+// Add a new restaurant
+function addRestaurant(restaurant) {
+    addToLocalStorage('restaurants', restaurant);
+}
+
+// Get all restaurants
+function getRestaurants() {
+    return getFromLocalStorage('restaurants');
+}
+
+// Delete a restaurant by ID
+function deleteRestaurant(restaurantId) {
+    deleteFromLocalStorage('restaurants', restaurantId);
+}
+
+// Add a new product
+function addProduct(product) {
+    addToLocalStorage('products', product);
+}
+
+// Get all products
+function getProducts() {
+    return getFromLocalStorage('products');
+}
+
+// Delete a product by ID
+function deleteProduct(productId) {
+    deleteFromLocalStorage('products', productId);
+}
+
+// Add a new favorite product
+function addFavoriteProduct(favoriteProduct) {
+    addToLocalStorage('favoriteProducts', favoriteProduct);
+}
+
+// Get all favorite products
+function getFavoriteProducts() {
+    return getFromLocalStorage('favoriteProducts');
+}
+
+// Delete a favorite product by user ID and product ID
+function deleteFavoriteProduct(userId, productId) {
+    const favoriteProduct = getFavoriteProducts().find(fp => fp.userId === userId && fp.productId === productId);
+    if (favoriteProduct) {
+        deleteFromLocalStorage('favoriteProducts', favoriteProduct.id);
+    }
+}
+
+// Add a new restaurant review
+function addRestaurantReview(review) {
+    addToLocalStorage('restaurantReviews', review);
+}
+
+// Get all restaurant reviews
+function getRestaurantReviews() {
+    return getFromLocalStorage('restaurantReviews');
+}
+
+// Delete a restaurant review by ID
+function deleteRestaurantReview(reviewId) {
+    deleteFromLocalStorage('restaurantReviews', reviewId);
 }
