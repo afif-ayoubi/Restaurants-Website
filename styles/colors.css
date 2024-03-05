@@ -10,12 +10,16 @@
     color: #6F2B06;
 }
 
+.dark-grey {
+    color: #646464;
+}
+
 .bg-brown {
     background-color: #6F2B06;
 }
 
-.dark-grey {
-    color: #646464;
+.bg-green {
+    background-color: #414E3F;
 }
 
 .bg-black {
