@@ -71,218 +71,40 @@ header > nav {
     font-size: 30px;
 }
 
-.resto-picks {
-    width: 100%;
-    max-height: 30%;
-    overflow: hidden;
-    background-image:url(../assets/images/paul-griffin-WWST6E8LxeE-unsplash.jpg);
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.resto-picks img {
-    width: 100px;
-    height: auto;
-}
-
-.resto-picks h2 {
-    font-size: 40px;
-    font-weight: bold;
-}
-
-.resto-picks-first-div {
-    max-height: 10%;
-    padding-top: 10px;
-    overflow: hidden;
-    font-size: 20px;
-    font-weight: 600;
-}
-
-.resto-picks-scnd-div {
-    max-height: 20%;
-    width: 100%;
-    margin: 30px 40px;
-    overflow: hidden;
-}
-
-.resto-picks-cards {
-    min-height: 400px;
-    width: 20%;
-    margin: 10px;
-    padding: 2rem;
-    border-radius: 15px;
-    overflow: hidden;
-    align-content: center;
-    text-align: center;
-}
-
-/* .resto-picks-cards:hover {
-    background-color: rgba(184, 230, 246, 0.374);
-    transition-delay: 80ms ;
-    transition-duration: 250ms;
-} */
-
-.resto-picks-scnd-div h3 p a{
-    word-wrap: break-word;
-    text-align: center;
-    font-weight: bolder;
-}
-
-.resto-picks-scnd-div h3{
-    margin-top: 0;
-}
-.resto-picks-scnd-div p{
-    margin-bottom: 0;
-}
-
-.resto-container {
-    width: 100%;
-    height: auto;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-image:url(../assets/images/black-wood.jpg);
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: repeat;
-    background-size: cover;
-}
-
-.resto-container-first-div {
-    width: 100%;
-    max-height: 10%;
-    padding-top: 30px;
-    overflow: relative;
-    font-size: 20px;
-    font-weight: 600;
-}
-
-.resto-container-scnd-div {
-    max-height: auto;
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-}
-
-.resto-cont-card {
-    height: 400px;
-    width: 60%;
-    padding: 2rem;
-    margin: 30px;
-    border-radius: 15px;
-    overflow: relative;
-    text-align: center;
-    opacity: 90%;
-}
-
-.search-container {
-    width: 300px;
-}
-  
-input[type="text"] {
-    flex: 1;
-    padding: 8px;
+.restaurant-details {
+    width: 50%;
+    margin: 20px auto;
+    padding: 20px;
     border: 1px solid #ccc;
-    border-radius: 15px;
-}
-  
-button {
-    padding: 8px 12px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 15px;
-    cursor: pointer;
-}
-  
-button:hover {
-    background-color: #0056b3;
-}
-
-.filter-container {
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  
-.filter-container form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-  }
-  
-.filter-container label {
-    margin-right: 10px;
-  }
-  
-.filter-container select {
-    padding: 5px;
-    margin-right: 10px;
-    border-radius: 15px;
-  }
-  
-.filter-container button {
-    padding: 5px 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.filter-container button:hover {
-    background-color: #0056b3;
-}
-
-.restaurant-info {
-    margin-bottom: 20px;
-  }
-  
-  .restaurant-info img {
-    width: 400px;
-    height: auto;
     border-radius: 5px;
-    margin-right: 20px;
-  }
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
-.restaurant-info span {
-    font-weight: bold;
-  }
-  
-.review-section {
-    border-radius: 4px;
-  }
-  
-  .review-section h2 {
-    font-size: 20px;
-  }
-  
-  .review-section ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .review-section li {
-    border-bottom: 1px solid #ddd;
-  }
-  
-  .review-section li:last-child {
-    border-bottom: none;
-  }
-  
-  .review-section p {
-    font-style: italic;
-  }
-  
-  .review-section span {
-    font-weight: bold;
-  }
+.details-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
 
-.review-info {
-    text-align: left;
-  }
+.details-label {
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .restaurant-details {
+        padding: 10px;
+    }
+
+    .details-row {
+        flex-direction: column;
+        margin-bottom: 5px;
+    }
+
+    .details-label {
+        margin-bottom: 5px;
+    }
+}
+
 
   footer {
     margin-top: 0;
