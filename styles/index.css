@@ -111,16 +111,47 @@ header > nav {
     margin-bottom: 0;
 }
 
+
+.resto-container {
+    width: 100%;
+    max-height: 1000px;
+    overflow: hidden;
+}
+
+.resto-container-first-div {
+    width: 100%;
+    max-height: 10%;
+    padding-top: 10px;
+    overflow: hidden;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.resto-container-scnd-div {
+    max-height: auto;
+    width: 100%;
+    margin: 30px 40px;
+    overflow: hidden;
+}
+
+.resto-cont-card {
+    min-height: 400px;
+    width: 60%;
+    padding: 2rem;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+}
+
 .search-container {
     max-width: 300px;
-    margin: 0 auto;
 }
   
 input[type="text"] {
     flex: 1;
     padding: 8px;
     border: 1px solid #ccc;
-    border-radius: 4px 0 0 4px;
+    border-radius: 15px;
 }
   
 button {
@@ -128,7 +159,7 @@ button {
     background-color: #007bff;
     color: white;
     border: none;
-    border-radius: 0 4px 4px 0;
+    border-radius: 15px;
     cursor: pointer;
 }
   
@@ -137,8 +168,6 @@ button:hover {
 }
 
 .filter-container {
-    display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 20px;
   }
@@ -167,8 +196,55 @@ button:hover {
     border-radius: 4px;
     cursor: pointer;
 }
-  
+
 .filter-container button:hover {
     background-color: #0056b3;
 }
+
+.restaurant-info {
+    margin-bottom: 20px;
+  }
   
+  .restaurant-info img {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    margin-right: 20px;
+  }
+
+.restaurant-info span {
+    font-weight: bold;
+  }
+  
+.review-section {
+    border-radius: 4px;
+  }
+  
+  .review-section h2 {
+    font-size: 20px;
+  }
+  
+  .review-section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .review-section li {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .review-section li:last-child {
+    border-bottom: none;
+  }
+  
+  .review-section p {
+    font-style: italic;
+  }
+  
+  .review-section span {
+    font-weight: bold;
+  }
+
+.review-info {
+    text-align: left;
+  }

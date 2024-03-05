@@ -30,13 +30,17 @@
     justify-content: space-between;
 }
 
-.align-itms-s {
-    align-content: start;
+.jstfy-cntnt-fs {
+    justify-content: flex-start;
 }
 
 .align-itms-c {
     align-items: center;
 }
+
+.align-itms-fs {
+    align-items: flex-start;
+  }
 
 .align-cntnt-c {
     align-content: center;
