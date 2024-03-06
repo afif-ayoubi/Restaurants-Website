@@ -37,3 +37,8 @@
 .bg-white {
     background-color: #FFFFFF;
 }
+
+.bg-white-cards {
+    background-color: #ffffff;
+    opacity: 90%;
+}
