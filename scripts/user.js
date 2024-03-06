@@ -31,7 +31,7 @@ const editData = (index) => {
   firstName.value = users[index].firstName;
   lastName.value = users[index].lastName;
   email.value = users[index].email;
-  password.value = users[index];
+  password.value = users[index].password;
   document.getElementById("update").onclick = () => {
     if (validateUser(users[index])) {
       users[index].firstName = firstName.value;
