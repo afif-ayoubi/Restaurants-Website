@@ -287,8 +287,12 @@ button:hover {
     padding: 0;
 }
 
-footer li {
-    color: #FFFFFF;
+footer {
+    margin-top: 0;
+    height: 300px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .footer-sec-1 {
@@ -297,7 +301,6 @@ footer li {
     word-wrap: break-word;
     margin: 30px;
     font-size: small;
-    color: #b6b6b6;
 }
 
 .footer-sec-2 {
@@ -305,11 +308,6 @@ footer li {
     width: 100%;
     word-wrap: break-word;
     overflow: hidden;
-}
-
-.footer-sec-2 img {
-    width: 200px;
-    height: auto;
 }
 
 .footer-sec-2-cards {
@@ -321,6 +319,10 @@ footer li {
     text-align: center;
 }
 
+.footer-sec-2-cards li{
+    padding: 2px;
+}
+
 .footer-sec-3 {
     padding: 40px 70px;
     height: auto;
@@ -328,8 +330,4 @@ footer li {
     align-items: center;
     text-align: center;
     overflow: hidden;
-}
-
-.footer-sec-3 a {
-    text-decoration: none;
 }
