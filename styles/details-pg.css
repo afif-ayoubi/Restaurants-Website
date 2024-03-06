@@ -34,6 +34,11 @@ header > nav {
     width: 40%;
 }
 
+.first-Header-div  img{
+    height: auto;
+    width: 50px;
+}
+
 .Second-Header-div {
     width: 20%;
 }
@@ -41,6 +46,12 @@ header > nav {
 .Second-Header-div a {
     color: #F2F4F3;
     text-decoration: none;
+}
+
+.Second-Header-div img {
+    height: auto;
+    width: 30px;
+    background-color: #FFFFFF;
 }
 
 .landing-sec {
@@ -69,7 +80,7 @@ header > nav {
 .landing-sec h1{
     font-style: italic;
     font-weight: bold;
-    font-size: 40px;
+    font-size: 50px;
 }
 .landing-sec h2{
     font-style: italic;
