@@ -1,3 +1,8 @@
+// note: use destructuring for object for better rendering html
+// example: const {name,age,password} = user
+// html <p>Welcome: ${name} </p>
+
+
 // Common function to add data to local storage
 function addToLocalStorage(key, newData) {
     const existingData = JSON.parse(localStorage.getItem(key)) || [];
