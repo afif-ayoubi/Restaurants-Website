@@ -1,116 +1,81 @@
-// note: use destructuring for object for better rendering html
-// example: const {name,age,password} = user
-// html <p>Welcome: ${name} </p>
+const addToLocalStorage = (key, newData) => {
+  const existingData = JSON.parse(localStorage.getItem(key)) || [];
+  const lastId =
+    existingData.length > 0 ? existingData[existingData.length - 1].id : 0;
+  newData.id = lastId + 1;
+  existingData.push(newData);
+  localStorage.setItem(key, JSON.stringify(existingData));
+  console.log("Auto-incremented ID:", newData.id);
+};
 
+const getFromLocalStorage = (key) =>
+  JSON.parse(localStorage.getItem(key)) || [];
 
-// Common function to add data to local storage
-function addToLocalStorage(key, newData) {
-    const existingData = JSON.parse(localStorage.getItem(key)) || [];
-    existingData.push(newData);
-    localStorage.setItem(key, JSON.stringify(existingData));
-}
-
-// Common function to get data from local storage
-function getFromLocalStorage(key) {
-    return JSON.parse(localStorage.getItem(key)) || [];
-}
-
-// Common function to delete data from local storage
-function deleteFromLocalStorage(key, id) {
-    const existingData = JSON.parse(localStorage.getItem(key)) || [];
-    const updatedData = existingData.filter(item => item.id !== id);
-    localStorage.setItem(key, JSON.stringify(updatedData));
-}
-
-// Add a new user
-function addUser(user) {
-    addToLocalStorage('users', user);
-}
-
-// Get all users
-function getUsers() {
-    return getFromLocalStorage('users');
-}
-
-// Delete a user by ID
-function deleteUser(userId) {
-    deleteFromLocalStorage('users', userId);
-}
-
-// Add a new admin
-function addAdmin(admin) {
-    addToLocalStorage('admins', admin);
-}
-
-// Get all admins
-function getAdmins() {
-    return getFromLocalStorage('admins');
-}
-
-// Delete an admin by user ID
-function deleteAdmin(userId) {
-    deleteFromLocalStorage('admins', userId);
-}
-
-// Add a new restaurant
-function addRestaurant(restaurant) {
-    addToLocalStorage('restaurants', restaurant);
-}
-
-// Get all restaurants
-function getRestaurants() {
-    return getFromLocalStorage('restaurants');
-}
-
-// Delete a restaurant by ID
-function deleteRestaurant(restaurantId) {
-    deleteFromLocalStorage('restaurants', restaurantId);
-}
-
-// Add a new product
-function addProduct(product) {
-    addToLocalStorage('products', product);
-}
-
-// Get all products
-function getProducts() {
-    return getFromLocalStorage('products');
-}
-
-// Delete a product by ID
-function deleteProduct(productId) {
-    deleteFromLocalStorage('products', productId);
-}
-
-// Add a new favorite product
-function addFavoriteProduct(favoriteProduct) {
-    addToLocalStorage('favoriteProducts', favoriteProduct);
-}
-
-// Get all favorite products
-function getFavoriteProducts() {
-    return getFromLocalStorage('favoriteProducts');
-}
-
-// Delete a favorite product by user ID and product ID
-function deleteFavoriteProduct(userId, productId) {
-    const favoriteProduct = getFavoriteProducts().find(fp => fp.userId === userId && fp.productId === productId);
-    if (favoriteProduct) {
-        deleteFromLocalStorage('favoriteProducts', favoriteProduct.id);
+const deleteFromLocalStorage = (key, id) => {
+  const existingData = JSON.parse(localStorage.getItem(key)) || [];
+  const updatedData = existingData.filter((item) => item.id !== id);
+  localStorage.setItem(key, JSON.stringify(updatedData));
+};
+const updateDataInLocalStorage = (key, id, updatedData) => {
+  const existingData = getFromLocalStorage(key);
+  const updatedItems = existingData.map((item) => {
+    if (item.id === id) {
+      return { ...item, ...updatedData };
     }
-}
+    return item;
+  });
+  localStorage.setItem(key, JSON.stringify(updatedItems));
+};
+const addUser = (user) => {
+  addToLocalStorage("users", user);
+};
 
-// Add a new restaurant review
-function addRestaurantReview(review) {
-    addToLocalStorage('restaurantReviews', review);
-}
+const getUsers = () => getFromLocalStorage("users");
 
-// Get all restaurant reviews
-function getRestaurantReviews() {
-    return getFromLocalStorage('restaurantReviews');
-}
+const deleteUser = (userId) => deleteFromLocalStorage("users", userId);
 
-// Delete a restaurant review by ID
-function deleteRestaurantReview(reviewId) {
-    deleteFromLocalStorage('restaurantReviews', reviewId);
-}
+const updateUser = (updatedUser) =>
+  updateDataInLocalStorage("users", updatedUser.id, updatedUser);
+
+const addAdmin = (admin) => addToLocalStorage("admins", admin);
+
+const getAdmins = () => getFromLocalStorage("admins");
+
+const deleteAdmin = (userId) => deleteFromLocalStorage("admins", userId);
+
+const addRestaurant = (restaurant) =>
+  addToLocalStorage("restaurants", restaurant);
+
+const getRestaurants = () => getFromLocalStorage("restaurants");
+
+const deleteRestaurant = (restaurantId) =>
+  deleteFromLocalStorage("restaurants", restaurantId);
+
+const addProduct = (product) => addToLocalStorage("products", product);
+
+const getProducts = () => getFromLocalStorage("products");
+
+const deleteProduct = (productId) =>
+  deleteFromLocalStorage("products", productId);
+
+const addFavoriteProduct = (favoriteProduct) =>
+  addToLocalStorage("favoriteProducts", favoriteProduct);
+
+const getFavoriteProducts = () => getFromLocalStorage("favoriteProducts");
+
+const deleteFavoriteProduct = (userId, productId) => {
+  const favoriteProduct = getFavoriteProducts().find(
+    (fp) => fp.userId === userId && fp.productId === productId
+  );
+  if (favoriteProduct) {
+    deleteFromLocalStorage("favoriteProducts", favoriteProduct.id);
+  }
+};
+
+const addRestaurantReview = (review) =>
+  addToLocalStorage("restaurantReviews", review);
+
+const getRestaurantReviews = () => getFromLocalStorage("restaurantReviews");
+
+const deleteRestaurantReview = (reviewId) =>
+  deleteFromLocalStorage("restaurantReviews", reviewId);

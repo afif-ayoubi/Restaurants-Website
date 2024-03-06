@@ -1,0 +1,19 @@
+* {
+  color: #fff;
+}
+body {
+  background-color: #1d2630;
+  
+}
+table {
+width: 100%;
+margin-bottom: 50px;
+}
+th, td {
+    padding: 10px;
+    border: 1px solid #fff; 
+}
+#update {
+  display: none;
+}
+

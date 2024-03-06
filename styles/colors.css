@@ -1,0 +1,35 @@
+.black {
+    color: #212121;
+}
+
+.white {
+    color: #F2F4F3;
+}
+
+.brown {
+    color: #6F2B06;
+}
+
+.dark-grey {
+    color: #646464;
+}
+
+.bg-brown {
+    background-color: #6F2B06;
+}
+
+.bg-green {
+    background-color: #414E3F;
+}
+
+.bg-black {
+    background-color: #212121;
+}
+
+.bg-white {
+    background-color: #FFFFFF;
+}
+
+.bg-footer {
+    background-color: #212121;
+}
