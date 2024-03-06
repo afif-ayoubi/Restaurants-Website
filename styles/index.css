@@ -28,6 +28,11 @@ header > nav {
     width: 40%;
 }
 
+.first-Header-div  img{
+    height: auto;
+    width: 50px;
+}
+
 .Second-Header-div {
     width: 20%;
 }
@@ -78,7 +83,7 @@ header > nav {
 
 .resto-picks h2 {
     font-size: 40px;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 
 .resto-picks-first-div {
@@ -179,7 +184,7 @@ input[type="text"] {
   
 button {
     padding: 8px 12px;
-    background-color: #007bff;
+    background-color: #212121;
     color: white;
     border: none;
     border-radius: 15px;
@@ -187,7 +192,7 @@ button {
 }
   
 button:hover {
-    background-color: #0056b3;
+    background-color: #333333;
 }
 
 .filter-container {
@@ -214,7 +219,7 @@ button:hover {
   
 .filter-container button {
     padding: 5px 10px;
-    background-color: #007bff;
+    background-color: #212121;
     color: white;
     border: none;
     border-radius: 4px;
@@ -222,7 +227,7 @@ button:hover {
 }
 
 .filter-container button:hover {
-    background-color: #0056b3;
+    background-color: #333333;
 }
 
 .restaurant-info {
