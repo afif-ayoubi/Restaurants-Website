@@ -74,18 +74,14 @@ header > nav {
     position: absolute;
     top: 50%;
     left: 50%;
-    /* transform: translate(-50%, -50%); */
 }
 
 .landing-sec h1{
-    font-style: italic;
-    font-weight: bold;
-    font-size: 50px;
+    font-size: 80px;
 }
+
 .landing-sec h2{
-    font-style: italic;
-    font-weight: bold;
-    font-size: 30px;
+    font-size: 40px;
 }
 
 .restaurant-details {
