@@ -6,10 +6,16 @@
     overflow-x: hidden;
 }
 
-main {
+/* main {
     margin: 0;
     padding: 0;
-}
+    overflow: hidden;
+    background-image:url(../assets/details-pg-images/victoria-shes-cMrLNX24eI0-unsplash.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: repeat;
+    background-size: cover;
+} */
 
 .container {
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
@@ -28,6 +34,11 @@ header > nav {
     width: 40%;
 }
 
+.first-Header-div  img{
+    height: auto;
+    width: 50px;
+}
+
 .Second-Header-div {
     width: 20%;
 }
@@ -35,6 +46,12 @@ header > nav {
 .Second-Header-div a {
     color: #F2F4F3;
     text-decoration: none;
+}
+
+.Second-Header-div img {
+    height: auto;
+    width: 30px;
+    background-color: #FFFFFF;
 }
 
 .landing-sec {
@@ -57,33 +74,31 @@ header > nav {
     position: absolute;
     top: 50%;
     left: 50%;
-    /* transform: translate(-50%, -50%); */
 }
 
 .landing-sec h1{
-    font-style: italic;
-    font-weight: bold;
-    font-size: 40px;
+    font-size: 80px;
 }
+
 .landing-sec h2{
-    font-style: italic;
-    font-weight: bold;
-    font-size: 30px;
+    font-size: 40px;
 }
 
 .restaurant-details {
     width: 50%;
     margin: 20px auto;
     padding: 20px;
-    border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    opacity: 90%;
+}
+
+.restaurant-details h2{
+    text-align: center;
 }
 
 .details-row {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
+    margin: 10px auto;
 }
 
 .details-label {
@@ -92,16 +107,17 @@ header > nav {
 
 .menu-section {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 20px;
-    border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    opacity: 90%;
 }
 
-.menu-categories {
-    display: flex;
-    flex-direction: column;
+.menu-section h2{
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
 }
 
 .menu-category {
@@ -115,23 +131,21 @@ header > nav {
 
 .menu-category h3 {
     margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
 }
 
 .menu-category p {
     margin: 5px 0;
+    font-style: italic;
 }
 
-
-  footer {
+footer {
     margin-top: 0;
     height: 300px;
     width: 100%;
     margin: 0;
     padding: 0;
-}
-
-footer li {
-    color: #FFFFFF;
 }
 
 .footer-sec-1 {
@@ -140,7 +154,6 @@ footer li {
     word-wrap: break-word;
     margin: 30px;
     font-size: small;
-    color: #b6b6b6;
 }
 
 .footer-sec-2 {
@@ -148,11 +161,6 @@ footer li {
     width: 100%;
     word-wrap: break-word;
     overflow: hidden;
-}
-
-.footer-sec-2 img {
-    width: 200px;
-    height: auto;
 }
 
 .footer-sec-2-cards {
@@ -164,6 +172,10 @@ footer li {
     text-align: center;
 }
 
+.footer-sec-2-cards li{
+    padding: 2px;
+}
+
 .footer-sec-3 {
     padding: 40px 70px;
     height: auto;
@@ -171,10 +183,6 @@ footer li {
     align-items: center;
     text-align: center;
     overflow: hidden;
-}
-
-.footer-sec-3 a {
-    text-decoration: none;
 }
 
 @media (max-width: 768px) {

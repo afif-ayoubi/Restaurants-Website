@@ -2,6 +2,10 @@
     color: #212121;
 }
 
+.black-2 {
+    color: black;
+}
+
 .white {
     color: #F2F4F3;
 }
@@ -22,14 +26,14 @@
     background-color: #414E3F;
 }
 
+.bg-grey {
+    background-color: #CCCCCC;
+}
+
 .bg-black {
     background-color: #212121;
 }
 
 .bg-white {
     background-color: #FFFFFF;
-}
-
-.bg-footer {
-    background-color: #212121;
 }
