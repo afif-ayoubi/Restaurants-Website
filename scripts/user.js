@@ -15,6 +15,12 @@ const AddData = () => {
     updateDataView();
   }
 };
+const deleteData = (index) => {
+  const users = getUsers();
+  const userId = users[index].id;
+  deleteUser(userId);
+  updateDataView();
+};
 
 const updateDataView = () => {
   const users = getFromLocalStorage("users");
@@ -45,7 +51,7 @@ const generatePeopleListHTML = (userList) => {
                 <td>${element.email}</td>
                 <td>${element.password}</td>
                 <td>
-                    <button onclick="deleteData(${index})" class="btn btn-danger" onclick="DeleteData">Delete</button>
+                    <button onclick="deleteData(${index})" class="btn btn-danger">Delete</button>
                     <button onclick="editData(${index})" class="btn btn-warning">Edit</button>
                 </td>
             </tr>
