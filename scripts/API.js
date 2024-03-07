@@ -50,6 +50,16 @@ const deleteRestaurant = (restaurantId) =>
   const updateRestaurant = (updateRestaurant) =>
   updateDataInLocalStorage("restaurants", updateRestaurant.id, updateRestaurant);
 
+  const searchRestaurants = (query) => {
+    const restaurants = getRestaurants();
+    const results = restaurants.filter((restaurant) => {
+      return restaurant.restaurantName.toLowerCase().startsWith(query.toLowerCase());
+    });
+    console.log(results);
+    return results;
+  }
+  
+
 const addProduct = (product) => addToLocalStorage("products", product);
 
 const getProducts = () => getFromLocalStorage("products");

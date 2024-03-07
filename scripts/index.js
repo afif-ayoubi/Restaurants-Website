@@ -1,14 +1,24 @@
 if (localStorage.getItem('signedIn')) {
-    const banner = document.getElementById('login-signup-banner');
-    banner.style.display = 'none';
+  const banner = document.getElementById('login-signup-banner');
+  banner.style.display = 'none';
 }
 
 const restaurants = getRestaurants()
 
 const restaurantsContainer = document.getElementById("restaurants-container");
+const searchInput = document.getElementById("search-input");
+const searchButton = document.getElementById("search-button");
 
 
+const searchOnRestaurants = () => {
+  const query = searchInput.value;
+  console.log(query);
 
+  const results = searchRestaurants(query);
+  const doll = generateRestaurantIntoHtml(results);
+  restaurantsContainer.innerHTML = doll;
+};
+searchButton.addEventListener("click", searchOnRestaurants);
 const generateRestaurantIntoHtml = (restaurantList) => {
     let html = "";
     restaurantList.forEach((element, index) => {
