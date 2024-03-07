@@ -323,6 +323,16 @@ footer {
     overflow: hidden;
 }
 
+
+.fa-heart-o{
+    font-size: 48px;
+}
+
+.fa-heart{
+    font-size: 48px;
+    color:red;
+}
+
 @media only screen and (min-width: 320px) and (max-width: 480px) {
     .landing-sec h1 {
         font-size: 40px;

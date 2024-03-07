@@ -233,3 +233,13 @@ footer {
         font-size: 12px;
     }
 }
+
+.fa-heart-o{
+    font-size: 48px;
+}
+
+
+.fa-heart{
+    font-size: 48px;
+    color:red;
+}

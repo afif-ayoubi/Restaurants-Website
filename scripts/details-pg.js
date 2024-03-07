@@ -48,3 +48,14 @@ const generateRestaurantDetails = (restaurant) => {
 
 const doll = generateRestaurantDetails(restaurant);
 restaurantsContainer.innerHTML += doll;
+
+
+
+
+const goHome = document.querySelectorAll('.gohome');
+
+goHome.forEach(function(icon) {
+    icon.addEventListener('click', function() {
+      window.location.href="./index.html";
+    });
+});
