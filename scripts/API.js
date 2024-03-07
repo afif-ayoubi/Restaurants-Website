@@ -47,6 +47,9 @@ const getRestaurants = () => getFromLocalStorage("restaurants");
 const deleteRestaurant = (restaurantId) =>
   deleteFromLocalStorage("restaurants", restaurantId);
 
+  const updateRestaurant = (updateRestaurant) =>
+  updateDataInLocalStorage("restaurants", updateRestaurant.id, updateRestaurant);
+
 const addProduct = (product) => addToLocalStorage("products", product);
 
 const getProducts = () => getFromLocalStorage("products");
