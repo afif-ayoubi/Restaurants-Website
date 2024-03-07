@@ -26,9 +26,10 @@ const updateDataInLocalStorage = (key, id, updatedData) => {
   });
   localStorage.setItem(key, JSON.stringify(updatedItems));
 };
-const addUser = (user) => {
+
+const addUser = (user) => 
   addToLocalStorage("users", user);
-};
+
 
 const getUsers = () => getFromLocalStorage("users");
 
@@ -37,11 +38,6 @@ const deleteUser = (userId) => deleteFromLocalStorage("users", userId);
 const updateUser = (updatedUser) =>
   updateDataInLocalStorage("users", updatedUser.id, updatedUser);
 
-const addAdmin = (admin) => addToLocalStorage("admins", admin);
-
-const getAdmins = () => getFromLocalStorage("admins");
-
-const deleteAdmin = (userId) => deleteFromLocalStorage("admins", userId);
 
 const addRestaurant = (restaurant) =>
   addToLocalStorage("restaurants", restaurant);
@@ -58,17 +54,17 @@ const getProducts = () => getFromLocalStorage("products");
 const deleteProduct = (productId) =>
   deleteFromLocalStorage("products", productId);
 
-const addFavoriteProduct = (favoriteProduct) =>
-  addToLocalStorage("favoriteProducts", favoriteProduct);
+const addFavoriteRestaurant = (favoriteRestaurant) =>
+  addToLocalStorage("favoriteRestaurants", favoriteRestaurant);
 
-const getFavoriteProducts = () => getFromLocalStorage("favoriteProducts");
+const getFavoriteRestaurants = () => getFromLocalStorage("favoriteRestaurants");
 
-const deleteFavoriteProduct = (userId, productId) => {
-  const favoriteProduct = getFavoriteProducts().find(
-    (fp) => fp.userId === userId && fp.productId === productId
+const deleteFavoriteRestaurant = (userId, RestaurantId) => {
+  const favoriteRestaurant = getFavoriteRestaurants().find(
+    (fp) => fp.userId === userId && fp.RestaurantId === RestaurantId
   );
-  if (favoriteProduct) {
-    deleteFromLocalStorage("favoriteProducts", favoriteProduct.id);
+  if (favoriteRestaurant) {
+    deleteFromLocalStorage("favoriteRestaurants", favoriteRestaurant.id);
   }
 };
 
