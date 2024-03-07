@@ -33,7 +33,6 @@ const editData = (index) => {
   email.value = users[index].email;
   password.value = users[index].password;
   document.getElementById("update").onclick = () => {
-    if (validateUser(users[index])) {
       users[index].firstName = firstName.value;
       users[index].lastName = lastName.value;
       users[index].email = email.value;
@@ -51,7 +50,7 @@ const editData = (index) => {
       document.getElementById("submit").style.display = "block";
       document.getElementById("update").style.display = "none";
     }
-}
+
   };
 };
 // const editData = (index) => {
@@ -85,16 +84,18 @@ const editData = (index) => {
 //     };
 //   };
 const updateDataView = () => {
-  const users = getFromLocalStorage("users");
+  const users =getUsers();
   const tableBody = document.querySelector("#crudTable tbody");
   tableBody.innerHTML = generatePeopleListHTML(users);
 };
+
 const resetForm = () => {
   firstName.value = "";
   lastName.value = "";
   email.value = "";
   password.value = "";
 };
+
 const validateUser = (user) => {
   return user.firstName === ""
     ? (alert("First name is required"), false)
@@ -108,6 +109,7 @@ const validateUser = (user) => {
     ? (alert("Password is required"), false)
     : true;
 };
+
 const generatePeopleListHTML = (userList) => {
   let html = "";
   userList.forEach((element, index) => {
