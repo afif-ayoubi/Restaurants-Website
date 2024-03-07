@@ -16,5 +16,10 @@ th, td {
 #update {
   display: none;
 }
+#updateRestaurant{
+  display: none;
 
-
+}
+#restaurantDashboard{
+  display: none;
+}

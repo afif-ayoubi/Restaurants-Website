@@ -86,7 +86,7 @@ const editData = (index) => {
 const updateDataView = () => {
   const users =getUsers();
   const tableBody = document.querySelector("#crudTable tbody");
-  tableBody.innerHTML = generatePeopleListHTML(users);
+  tableBody.innerHTML = generateUserIntoHtml(users);
 };
 
 const resetForm = () => {
@@ -110,7 +110,7 @@ const validateUser = (user) => {
     : true;
 };
 
-const generatePeopleListHTML = (userList) => {
+const generateUserIntoHtml = (userList) => {
   let html = "";
   userList.forEach((element, index) => {
     html += `
