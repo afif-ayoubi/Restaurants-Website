@@ -40,3 +40,117 @@ addRestaurant({
     restaurantRating: "4.7",
     restaurantDescription: "Sizzling Steaks Grill offers the finest quality steaks cooked to perfection. Join us for an unforgettable dining experience!"
 });
+
+addProduct(
+    {
+        type:"Appetizer",
+        name: "octopus carpacciao",
+        price: "9",
+        ingredients: "raw octopus, lime zest, greens on top"
+    }
+);
+
+addProduct({
+    type: "Appetizer",
+    name: "Garlic Bread",
+    price: "6",
+    ingredients: "Bread, garlic, butter, parsley"
+});
+
+addProduct({
+    type: "Main Course",
+    name: "Beef Burger",
+    price: "12",
+    ingredients: "Beef patty, lettuce, tomato, onion, cheese, bun"
+});
+
+addProduct({
+    type: "Dessert",
+    name: "Cheesecake",
+    price: "8",
+    ingredients: "Cream cheese, sugar, eggs, graham cracker crust"
+});
+
+addProduct({
+    type: "Appetizer",
+    name: "Mozzarella Sticks",
+    price: "9",
+    ingredients: "Mozzarella cheese, breadcrumbs, marinara sauce"
+});
+
+addProduct({
+    type: "Main Course",
+    name: "Chicken Alfredo",
+    price: "15",
+    ingredients: "Chicken breast, fettuccine pasta, Alfredo sauce"
+});
+
+addProduct({
+    type: "Dessert",
+    name: "Apple Pie",
+    price: "10",
+    ingredients: "Apples, cinnamon, sugar, pastry crust"
+});
+
+addProduct({
+    type: "Appetizer",
+    name: "Shrimp Cocktail",
+    price: "11",
+    ingredients: "Shrimp, cocktail sauce, lemon wedge"
+});
+
+addProduct({
+    type: "Main Course",
+    name: "Vegetarian Pizza",
+    price: "14",
+    ingredients: "Pizza dough, tomato sauce, mozzarella cheese, vegetables"
+});
+
+addProduct({
+    type: "Dessert",
+    name: "Chocolate Brownie",
+    price: "7",
+    ingredients: "Chocolate, butter, sugar, flour, eggs"
+});
+
+addProduct({
+    type: "Appetizer",
+    name: "Spinach Artichoke Dip",
+    price: "8",
+    ingredients: "Spinach, artichokes, cream cheese, sour cream"
+});
+
+addProduct({
+    type: "Main Course",
+    name: "Salmon Fillet",
+    price: "18",
+    ingredients: "Salmon fillet, lemon, herbs"
+});
+
+addProduct({
+    type: "Dessert",
+    name: "Strawberry Shortcake",
+    price: "9",
+    ingredients: "Strawberries, whipped cream, shortcake biscuit"
+});
+
+addProduct({
+    type: "Appetizer",
+    name: "Stuffed Mushrooms",
+    price: "10",
+    ingredients: "Mushrooms, breadcrumbs, garlic, Parmesan cheese"
+});
+
+addProduct({
+    type: "Main Course",
+    name: "Pasta Primavera",
+    price: "13",
+    ingredients: "Pasta, mixed vegetables, olive oil, garlic"
+});
+
+addProduct({
+    type: "Dessert",
+    name: "Lemon Tart",
+    price: "11",
+    ingredients: "Lemon curd, pastry crust, powdered sugar"
+});
