@@ -337,3 +337,13 @@ footer {
     text-align: center;
     overflow: hidden;
 }
+
+
+.fa-heart-o{
+    font-size: 48px;
+}
+
+.fa-heart{
+    font-size: 48px;
+    color:red;
+}

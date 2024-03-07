@@ -17,8 +17,9 @@ const generateRestaurantIntoHtml = (restaurantList) => {
                 <div class="restaurant-info flx flx-clmn jstfy-cntnt-sa align-cntnt-c">
                   <img src="${element.restaurantImage}" alt="Restaurant Picture">
                   <div class="info">
-                    <h2>${element.restaurantName}</h2>
-                    <p>Rating: <span>${element.restaurantRating}</span></p>
+                    <h2><a href="./details-pg.html?restoId=${element.id}">${element.restaurantName}</a></h2>
+                    <p>Rating: <span>${element.restaurantRating}
+                    <i id="heart-${element.id}" class="fa fa-heart-o heart-icon"></i></p>
                   </div>
                 </div>
                 <div class="flx flx-clmn jstfy-cntnt-se">
@@ -30,7 +31,6 @@ const generateRestaurantIntoHtml = (restaurantList) => {
                           <h4>John Doe</h4>
                           <div class="info">
                             <p>Rating: <span>5</span>
-                            <img class="heart-icon" src="../assets/icons/heart-59-64.png">
                             </p>
                         </div>
                         <p>"Great food and atmosphere! Highly recommended."</p>
@@ -66,3 +66,23 @@ const generateRestaurantIntoHtml = (restaurantList) => {
 
 const doll = generateRestaurantIntoHtml(restaurants);
 restaurantsContainer.innerHTML += doll;
+
+
+const heartIcons = document.querySelectorAll('.heart-icon');
+
+heartIcons.forEach(function(icon) {
+    icon.addEventListener('click', function() {
+        icon.classList.toggle('fa-heart-o');
+        icon.classList.toggle('fa-heart');
+    });
+});
+
+
+
+const goHome = document.querySelectorAll('.gohome');
+
+goHome.forEach(function(icon) {
+    icon.addEventListener('click', function() {
+      window.location.href="./index.html";
+    });
+});
