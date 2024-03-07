@@ -29,7 +29,9 @@ const generateRestaurantIntoHtml = (restaurantList) => {
                         <div class="review-info">
                           <h4>John Doe</h4>
                           <div class="info">
-                            <p>Rating: <span>5</span></p>
+                            <p>Rating: <span>5</span>
+                            <img class="heart-icon" src="../assets/icons/heart-59-64.png">
+                            </p>
                         </div>
                         <p>"Great food and atmosphere! Highly recommended."</p>
                       </li>
