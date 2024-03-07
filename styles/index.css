@@ -285,14 +285,6 @@ button:hover {
     padding:6px;
   }
 
-  footer {
-    margin-top: 0;
-    height: 300px;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-
 footer {
     margin-top: 0;
     height: 300px;
@@ -304,7 +296,6 @@ footer {
 .footer-sec-1 {
     height: 50px;
     width: 100%;
-    word-wrap: break-word;
     margin: 30px;
     font-size: small;
 }
@@ -312,11 +303,11 @@ footer {
 .footer-sec-2 {
     height: 250px;
     width: 100%;
-    word-wrap: break-word;
     overflow: hidden;
 }
 
 .footer-sec-2-cards {
+    flex: 1 1 250px;
     margin: 5px;
     padding: 2rem;
     border-radius: .35rem;
@@ -336,4 +327,59 @@ footer {
     align-items: center;
     text-align: center;
     overflow: hidden;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    .landing-sec h1 {
+        font-size: 40px;
+    }
+
+    .resto-picks h2 {
+        font-size: 30px;
+    }
+
+    .resto-picks-cards {
+        min-height: 300px;
+        width: 45%;
+        margin: 5px;
+        padding: 1rem;
+    }
+
+    .resto-cont-card {
+        height: 300px;
+        width: 90%;
+        padding: 1rem;
+        margin: 10px;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .resto-picks-cards {
+        min-height: 350px;
+        width: 30%;
+        margin: 5px;
+        padding: 1rem;
+    }
+
+    .resto-cont-card {
+        height: 350px;
+        width: 45%;
+        padding: 1rem;
+        margin: 10px;
+    }
+
+}@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .resto-picks-cards {
+        min-height: 400px;
+        width: 20%;
+        margin: 10px;
+        padding: 1rem;
+    }
+
+    .resto-cont-card {
+        height: 400px;
+        width: 55%;
+        padding: 1rem;
+        margin: 20px;
+    }
 }
