@@ -22,6 +22,7 @@ const users = getUsers()
 btnLogin.addEventListener("click", (e) => {
     const user = checkCredentials(inputEmail.value, inputPassword.value);
     if (user) {
+        localStorage.setItem('signedIn', 'true');
         if(user.isAdmin){
             window.location.href = "./dashboard/main-page.html"
         }else{
