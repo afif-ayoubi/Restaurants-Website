@@ -383,3 +383,40 @@ footer {
         margin: 20px;
     }
 }
+
+@media (max-width: 768px) {
+    .first-Header-div {
+        width: 40%;
+    }
+
+    .Second-Header-div {
+        width: 20%;
+    }
+
+    .restaurant-details,
+    .menu-section {
+        width: 100%; /* Full width for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-sec-1 h2{
+        font-size: 11px;
+    }
+    .footer-sec-2 {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .footer-sec-2 h2{
+        font-size: small;
+    }
+    .footer-sec-2 ul > li{
+        font-size: 11px;
+    }
+    .footer-sec-2-cards {
+        padding: 0.5rem;
+    }
+    .footer-sec-3 {
+        font-size: 12px;
+    }
+}

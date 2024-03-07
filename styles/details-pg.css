@@ -21,7 +21,7 @@ header > nav {
 }
 
 .first-Header-div {
-    width: 40%;
+    width: 50%;
 }
 
 .first-Header-div  img{
@@ -30,7 +30,7 @@ header > nav {
 }
 
 .Second-Header-div {
-    width: 20%;
+    width: 30%;
 }
 
 .Second-Header-div a {
@@ -147,7 +147,7 @@ footer {
 }
 
 .footer-sec-2 {
-    height: 250px;
+    height: auto;
     width: 100%;
     word-wrap: break-word;
     overflow: hidden;
@@ -155,7 +155,7 @@ footer {
 
 .footer-sec-2-cards {
     margin: 5px;
-    padding: 2rem;
+    padding: 1rem;
     border-radius: .35rem;
     overflow: hidden;
     align-content: center;
@@ -176,30 +176,38 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .restaurant-details {
-        padding: 10px;
+    .first-Header-div {
+        width: 40%;
     }
 
-    .details-row {
-        flex-direction: column;
-        margin-bottom: 5px;
+    .Second-Header-div {
+        width: 20%;
     }
 
-    .details-label {
-        margin-bottom: 5px;
+    .restaurant-details,
+    .menu-section {
+        width: 100%; /* Full width for smaller screens */
     }
 }
 
-@media (max-width: 768px) {
-    .menu-category {
-        margin-bottom: 10px;
+@media (max-width: 480px) {
+    .footer-sec-1 h2{
+        font-size: 11px;
     }
-
-    .menu-category h3 {
-        font-size: 1em;
+    .footer-sec-2 {
+        flex-direction: column;
+        gap: 10px;
     }
-
-    .menu-category p {
-        font-size: 0.8em;
+    .footer-sec-2 h2{
+        font-size: small;
+    }
+    .footer-sec-2 ul > li{
+        font-size: 11px;
+    }
+    .footer-sec-2-cards {
+        padding: 0.5rem;
+    }
+    .footer-sec-3 {
+        font-size: 12px;
     }
 }
