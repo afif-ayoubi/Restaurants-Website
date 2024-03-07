@@ -5,7 +5,7 @@ addUser({firstName: "afif", lastName: "ayoubi", email: "afif@example.com", passw
 
 addRestaurant({
     id:1,
-    restaurantName: "Tasty Bites Restaurant",
+    restaurantName: "tasty Bites Restaurant",
     restaurantAddress: "123 Main Street, Cityville",
     restaurantPhone: "123-456-7890",
     restaurantHours: "Mon-Sat: 9am-10pm, Sun: 11am-8pm",
