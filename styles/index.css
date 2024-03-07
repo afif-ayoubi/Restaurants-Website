@@ -113,12 +113,6 @@ header > nav {
     text-align: center;
 }
 
-/* .resto-picks-cards:hover {
-    background-color: rgba(184, 230, 246, 0.374);
-    transition-delay: 80ms ;
-    transition-duration: 250ms;
-} */
-
 .resto-picks-scnd-div h3 p a{
     word-wrap: break-word;
     text-align: center;
@@ -399,7 +393,130 @@ footer {
     }
 }
 
+@media (min-width: 1024px) {
+    .resto-container-scnd-div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .resto-cont-card {
+        width: 45%;
+        margin: 10px;
+    }
+
+    .restaurant-info {
+        margin-bottom: 0;
+    }
+
+    .restaurant-info img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+        margin-right: 20px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .resto-container-scnd-div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .resto-cont-card {
+        width: 45%;
+        margin: 10px;
+    }
+
+    .restaurant-info {
+        margin-bottom: 0;
+    }
+
+    .restaurant-info img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .resto-container-scnd-div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .resto-cont-card {
+        width: 90%;
+        margin: 10px;
+    }
+
+    .restaurant-info {
+        margin-bottom: 20px;
+    }
+
+    .restaurant-info img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        border-radius: 5px;
+        margin-right: 0;
+    }
+}
+
 @media (max-width: 480px) {
+    .resto-container-scnd-div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .resto-cont-card {
+        width: 90%;
+        margin: 10px;
+    }
+
+    .restaurant-info {
+        margin-bottom: 20px;
+    }
+
+    .restaurant-info img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        border-radius: 5px;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-sec-1 h2{
+        font-size: 11px;
+    }
+    .footer-sec-2 {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .footer-sec-2 h2{
+        font-size: small;
+    }
+    .footer-sec-2 ul > li{
+        font-size: 11px;
+    }
+    .footer-sec-2-cards {
+        padding: 0.5rem;
+    }
+    .footer-sec-3 {
+        font-size: 12px;
+    }
+}
+@media (max-width: 768px) {
     .footer-sec-1 h2{
         font-size: 11px;
     }

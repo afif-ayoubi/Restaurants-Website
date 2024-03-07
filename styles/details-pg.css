@@ -211,3 +211,25 @@ footer {
         font-size: 12px;
     }
 }
+
+@media (max-width: 768px) {
+    .footer-sec-1 h2{
+        font-size: 11px;
+    }
+    .footer-sec-2 {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .footer-sec-2 h2{
+        font-size: small;
+    }
+    .footer-sec-2 ul > li{
+        font-size: 11px;
+    }
+    .footer-sec-2-cards {
+        padding: 0.5rem;
+    }
+    .footer-sec-3 {
+        font-size: 12px;
+    }
+}
